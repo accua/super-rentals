@@ -16,6 +16,11 @@ export default Ember.Component.extend({
       };
       this.set('updateRentalForm', false);
       this.sendAction('update', rental, params);
+    },
+    delete(rental) {
+      if (confirm('Are you sure you want to delete this rental?')) {
+        this.sendAction('destroyRental', rental);
+      }
     }
   }
 });

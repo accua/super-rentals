@@ -30,6 +30,8 @@
       <button {{action 'update' rental}}>Save</button>
     </form>
   </div>
+  <button {{action 'delete' rental}}>Delete</button>
 {{else}}
   <button {{action 'updateRentalForm'}}>Update</button>
+  <button {{action 'delete' rental}}>Delete</button>
 {{/if}}
